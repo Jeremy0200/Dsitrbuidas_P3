@@ -1,4 +1,4 @@
-# Dsitrbuidas_P3 (V_Final = Microservicios Unidos)
+# Dsitrbuidas_P3 (V_Final = Microservicios Final)
 # Proyecto Microservicios - Kubernetes + DockerHub
 
 **Autores:** Alejandro Cuadrado, Isaac Escobar  
