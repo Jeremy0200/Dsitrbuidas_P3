@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio-inventario
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservicio-inventario
+  template:
+    metadata:
+      labels:
+        app: microservicio-inventario
+    spec:
+      containers:
+        - name: inventario
+          image: astarto/microservicio-inventario
+          ports:
+            - containerPort: 8082
+          env:
+            - name: SPRING_DATA_MONGODB_URI
+              value: mongodb://mongo-service:27017/inventariodb
+            - name: SPRING_RABBITMQ_HOST
+              value: rabbitmq-service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: inventario-service
+spec:
+  selector:
+    app: microservicio-inventario
+  ports:
+    - port: 8082
+      targetPort: 8082
+  type: ClusterIP
