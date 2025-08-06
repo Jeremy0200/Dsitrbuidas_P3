@@ -1,13 +1,13 @@
-package espe.edu.ec.cosechas;
+package espe.edu.ec.microservicio_Inventario;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CosechasApplication {
+public class MicroservicioInventarioApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CosechasApplication.class, args);
+		SpringApplication.run(MicroservicioInventarioApplication.class, args);
 	}
 
 }
